@@ -327,7 +327,7 @@ def load_results(data_set_name, mlc, test_name, algorithm_list_filter=[], algori
         return ranking_loss, average_precision, train_time, test_time
 
 if __name__ == '__main__':
-    data_name = 'medical'
+    data_name = 'emotions'
     test_name = 'temp'
     need_normalize = False
     need_sampling = False
@@ -346,8 +346,8 @@ if __name__ == '__main__':
     test(data_name, 'BR', test_name, need_normalize=need_normalize, need_sampling=need_sampling,
          algorithm_list_filter=algorithm_list_filter, algorithm_list_wrapper=algorithm_list_wrapper,
          need_contaminate=need_contaminate, need_shuffling=need_shuffling)
+    test(data_name, 'CC', test_name, need_normalize=need_normalize, need_sampling=need_sampling,
+         algorithm_list_filter=algorithm_list_filter, algorithm_list_wrapper=algorithm_list_wrapper,
+         need_contaminate=need_contaminate, need_shuffling=need_shuffling)
     # test(data_name, 'CLR', test_name, need_normalize=need_normalize, need_sampling=need_sampling,
     #      algorithm_list_filter=algorithm_list_filter, algorithm_list_wrapper=algorithm_list_wrapper)
-    # test(data_name, 'CC', test_name, need_normalize=need_normalize, need_sampling=need_sampling,
-    #     algorithm_list_filter=algorithm_list_filter, algorithm_list_wrapper=algorithm_list_wrapper,
-    #     need_contaminate=need_contaminate, need_shuffling=need_shuffling)
